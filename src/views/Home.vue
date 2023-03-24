@@ -1,13 +1,14 @@
 <template>
     <h1 class="text-3xl font-bold underline">
-      Hello world!
+      {{ meals }}
     </h1>
 </template>
 
 <script>
-export default {
-    name: 'home'
-}
+import { computed } from 'vue';
+import store from '../store';
+const meals = computed(() => store.state.meals)
+// ex 
 </script>
 
 <style>
